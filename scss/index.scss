@@ -1,0 +1,386 @@
+/* ここからヘッダー */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: white;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  &__ttl img{
+    width: 40%;
+  }
+  &__nav--list{
+    display: none;
+  }
+}
+a{
+  text-decoration: none;
+  color: blue
+}
+.drawer-nav{
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    transition: .7s;
+    &-list{
+      padding-top: 80px;
+      text-align: center;
+    }
+    &-item{
+      margin-top: 40px;
+      color: #0033cc;
+      font-size: 18px;
+    }
+  }
+  .in {
+    transform: translateX(100%);
+  }
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  &-line-top,&-line-middle,&-line-bottom{
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+  }
+  &-line-top{
+    top: 0;
+  }
+  &-line-middle{
+    top: 14px;
+  }
+  &-line-bottom{
+    bottom: 0;
+  }
+  &.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+  &.open span:nth-of-type(2) {
+  opacity: 0;
+}
+  &.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+.in{
+  transform: translateX(100%);
+}
+}
+/* ヘッダー終了 */
+/*　ここからtop-mv */
+.top-mv{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  background: url(../img/mv.png);
+  background-size: cover;
+  height: 80vh;
+  &__main--copy{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    line-height: 80px;
+    }
+    &__sub--copy{
+    font-size: 18px;
+    color: white;
+    }
+  }
+/* top-mv終了　*/
+/* ここからfeature-wrap */
+.feature-wrap{
+  background-color: #222323;
+  padding: 80px 0;
+  &__inner{
+    margin: 0 40px;
+    &--ttl{
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+    &--msg{
+      color: white;
+      margin-top: 20px;
+      line-height: 20px;
+    }
+  }
+}
+/* feature-wrap終了 */
+/* ここからservice-wrap */
+.service-wrap{
+  padding: 80px 0;
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  &__ttl{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__list{
+    &--item img{
+      width: 100%;
+    }
+    .list-item__ttl{
+      text-align: left;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .list-item__txt{
+      text-align: left;
+      margin: 10px 0;
+      line-height: 20px;
+    }
+  }
+  &__btn{
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    background-color: #cd0224;
+    color: white;
+    font-weight: bold;
+    margin: 40px auto 0;
+  }
+}
+/* service-wrap終了 */
+/* ここからnews-wrap */
+.news-wrap{
+  background-color: #222323;
+  padding: 80px 0;
+  &__inner{
+    margin: 0 auto;
+    width: 85%;
+  }
+  &__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    &--ttl{
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+    &--btn{
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 10px;
+      width: 160px;
+      color: white;
+      display: inline-block;
+      background-color: #cd0224;
+    }
+  }
+  &__list{
+    .list-item{
+      background-color: white;
+      padding: 14px;
+      margin-bottom: 10px;
+      &__link{
+        display: flex;
+        color: black;
+      }
+      &__date{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+/* news-wrap終了 */
+/* ここからblog-wrap */
+.blog-wrap{
+  padding: 80px 0;
+  margin: 0 auto;
+  width: 85%;
+  text-align: center;
+  &__ttl{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__list{
+    margin-top: 20px;
+    .list-item{
+      text-align: left;
+      img{
+        width: 100%;
+      }
+      &__date{
+        margin: 10px 0;
+      }
+      &__ttl{
+        font-size: 18px;
+        color: black;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+/* blog-wrap終了 */
+/* company-list-wrap */
+.company-list-wrap{
+  display: flex;
+  align-items: center;
+  padding: 0 0 80px 0;
+  width: 100%;
+  &__item{
+    display: block;
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 10;
+    h2{
+      color: white;
+    }
+  }
+  .red{
+    background-color: #cd0224;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+  .black{
+    background-color: #222;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+/* company-list-wrap終了 */
+/* ここからcontact-wrap */
+.contact-wrap{
+  text-align: center;
+  padding: 80px 0;
+  background-color: #f5f6f9;
+  &__inner{
+    width: 85%;
+    margin: 0 auto;
+    &--ttl{
+      font-size: 30px;
+    }
+    &--txt{
+      margin-top: 15px;
+    }
+  }
+}
+/* contact-wrap終了 */
+/* ここからフッター */
+.footer{
+  padding: 20px 0;
+  background-color: #222;
+  &-inner{
+    color: white;
+    margin: 0 auto;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-copyright{
+    font-size: 12px;
+  }
+  &-nav{
+    &__list{
+      &--item{
+        text-align: center;
+        margin-top: 10px;
+        a{
+          color: white;
+        }
+      }
+    }
+  }
+}
+/* footer終了 */
+
+
+
+
+
+@media screen and (min-width:769px){
+  /* ここからヘッダー */
+  .header{
+    &__nav--list{
+    display: block;
+    display: flex;
+  }
+  &__nav--item{
+      margin-right: 30px;
+      a{
+      color: #000;
+      font-weight: bold;
+    }
+    }
+  .menu{
+    display: none;
+  }
+  }
+  /* ヘッダー終了 */
+  /* ここからservice-wrap */
+  .service-wrap{
+    width: 1080px;
+    margin: 0 auto;
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      &--item{
+        width: 50%;
+        margin-top: 20px;
+        padding: 10px;
+      }
+    }
+    .list-item__ttl{
+      margin-bottom: 10px;
+    }
+  }
+  /* service-wrap終了 */
+  /* ここからblog-wrap */
+  .blog-wrap{
+    margin: 0 auto;
+    width: 1080px;
+    &__list{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .list-item{
+        width: 100%;
+        margin-right: 20px;
+      }
+      .list-item:nth-child(3n){
+        margin-right: 0;
+      }
+    }
+  }
+  /* blog-wrap終了 */
+  /* ここからフッター */
+  .footer{
+    &-nav__list{
+      display: flex;
+      &--item:after{
+        content: "|";
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+  }
+  /* フッター終了 */
+}
